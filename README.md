@@ -12,8 +12,15 @@ for the usage of the mvcct-enhancer module. Below, all selected bootstrap widget
 All widgets(as well as mvcct-enhancer) are registered as dependencies, so if you use either nmp, or bower you will them have 
 automatically installed when you install bootstrap-html5-fallback:
 
-1. Date-picker: [smalot-bootstrap-datetimepicker](https://github.com/smalot/bootstrap-datetimepicker). Options placed in options property: html5FallbackWidgets.date
-2. Time-picker: [smalot-bootstrap-datetimepicker](https://github.com/smalot/bootstrap-datetimepicker). Options placed in options property: html5FallbackWidgets.time
-3. Date-time-picker: [smalot-bootstrap-datetimepicker](https://github.com/smalot/bootstrap-datetimepicker). Options placed in options property: html5FallbackWidgets.datetime
-4. Color-picker: [mjolnic-bootstrap-colorpicker](https://github.com/mjolnic/bootstrap-colorpicker).Options placed in options property: html5FallbackWidgets.color
-5. Numeric-range [seiyria-bootstrap-slider](https://github.com/seiyria/bootstrap-slider).Options placed in options property: html5FallbackWidgets.range
+1. Date-picker: [smalot-bootstrap-datetimepicker](https://github.com/smalot/bootstrap-datetimepicker). Options placed in options property: `html5FallbackWidgets.date`
+2. Time-picker: [smalot-bootstrap-datetimepicker](https://github.com/smalot/bootstrap-datetimepicker). Options placed in options property: `html5FallbackWidgets.time`
+3. Date-time-picker: [smalot-bootstrap-datetimepicker](https://github.com/smalot/bootstrap-datetimepicker). Options placed in options property: `html5FallbackWidgets.datetime`
+4. Color-picker: [mjolnic-bootstrap-colorpicker](https://github.com/mjolnic/bootstrap-colorpicker).Options placed in options property: `html5FallbackWidgets.color`
+5. Numeric-range [seiyria-bootstrap-slider](https://github.com/seiyria/bootstrap-slider).Options placed in options property: `html5FallbackWidgets.range`
+
+Some options property, when supported by the widgets are outomatically 
+filled by the fallback module. Namely:
+* date and time formats, if possible, are extracted from the options `editFormats` and from the current locale.
+* initial input value, and min/max/ step property when supported by the widget are automatically filled 
+with the original Html5 input corresponding property values.
+(converted in the current locale when needed by the widget).
