@@ -1,4 +1,4 @@
-# Bootstrap Htmg fallback
+# Bootstrap Html5 input fallback
 A Twitter Bootstrap based Html5 input fallback. It adds Bootstrap widgets to the 
 [mvcct-enhancer](https://github.com/MvcControlsToolkit/mvcct-enhancer) basic Html5 input fallback module. 
 Thus it depends on both the  `mvcct.enhancer.js `, and  `mvcct.enhancer.input.basic.js` [mvcct-enhancer](https://github.com/MvcControlsToolkit/mvcct-enhancer) modules.
