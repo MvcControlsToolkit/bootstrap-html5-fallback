@@ -1,0 +1,41 @@
+{
+  "name": "bootstrap-html5-fallback",
+  "version": "1.0.0-rc2",
+  "description": "bootstrap widgets based html5 inputs fallback",
+  "main": "bootstrap.html5.fallback.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MvcControlsToolkit/bootstrap-html5-fallback.git"
+  },
+  "keywords": [
+    "bootstrap",
+    "enhancement",
+    "html5",
+    "polyfill"
+  ],
+  "readme": "bootstrap widgets based html5 inputs fallback",
+  "author": "Mvc Controls Toolkit Team",
+  "license": "https://github.com/MvcControlsToolkit/bootstrap-html5-fallback/blob/master/LICENSE.txt",
+  "bugs": {
+    "url": "https://github.com/MvcControlsToolkit/bootstrap-html5-fallback/issues"
+  },
+  "homepage": "https://github.com/MvcControlsToolkit/bootstrap-html5-fallback",
+  "files": [
+    "LICENSE.txt",
+    "mvcct.enhancer.d.ts",
+    "bootstrap.html5.fallback.js",
+    "bootstrap.html5.fallback.min.js",
+    "bootstrap.html5.fallback.d.ts"
+  ],
+  "dependencies": {
+        "mvcct-enhancer": ">=1.0.0-rc3",
+        "bootstrap-colorpicker": ">=2.3.3",
+        "smalot-bootstrap-datetimepicker": ">=2.3.10",
+        "seiyria-bootstrap-slider": ">=7.0.3"
+    },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.5.3"
+  }
+}
