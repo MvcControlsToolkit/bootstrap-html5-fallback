@@ -31,7 +31,7 @@
         "mvcct-enhancer": ">=1.0.0-rc3",
         "bootstrap-colorpicker": ">=2.3.3",
         "bootstrap-datetime-picker": ">=2.3.10",
-        "bootstrap-slider": ">=7.0.3"
+        "bootstrap-slider": ">=7.0.2"
     },
   "devDependencies": {
     "gulp": "^3.9.1",
