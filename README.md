@@ -7,6 +7,8 @@ More specifically, date-picker, date-time-picker, numeric-range, and color-picke
 widgets are added as needed to the falled back Html5 inputs. Please, don't forget that Html5 inputs fallback is activated
 bya calling the `mvcct.enhancer.addBasicInput` method and passing it a [Globalize](https://github.com/jquery/globalize) object.
 
+**bootstrap-html5-fallback is available both on bower and npm** 
+
 Widget options are added to the overall mvcct-enhancer options object. 
 Please refer to the [mvcct-enhancer](https://github.com/MvcControlsToolkit/mvcct-enhancer) 
 for the usage of the mvcct-enhancer module. Below, all selected bootstrap widgets, and the loacation theyr options are placed.
