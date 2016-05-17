@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-html5-fallback",
-  "version": "1.0.0-rc2",
+  "version": "1.0.0-rc3",
   "description": "bootstrap widgets based html5 inputs fallback",
   "main": "bootstrap.html5.fallback.js",
   "repository": {
