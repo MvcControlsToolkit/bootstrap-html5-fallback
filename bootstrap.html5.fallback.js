@@ -241,7 +241,7 @@
 		  o.minView= 3;
           o.format=editFormats.monthFormat;
 		  o.forceParse= 0;
-          o.startDate= enhancer.parse(oNode.getAttribute("min"), true);
+          o.startDate= enhancer.parse("month", oNode.getAttribute("min"), true);
           o.endDate= enhancer.parse("month", oNode.getAttribute("max"), true);
           $(fNode).datetimepicker(o).on("changeDate", function(){
               var ev = document.createEvent("Event");
