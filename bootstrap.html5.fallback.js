@@ -112,12 +112,14 @@
     $.fn.datetimepicker.dates = $.fn.datetimepicker.dates || {};
     $.fn.datetimepicker.dates[culture]=res;
   }
-  function getOptions(options, name){
+  function getOptions(options, name, fNode, oNode){
       var userOptions=options.html5FallbackWidgets ||{};
       userOptions=userOptions[name] ||{};
+      if(typeof userOptions === "function")
+        userOptions=userOptions(fNode, oNode) || {};
       var res= {};
-      for(var prop in defaults){
-          res[prop]=userOptions[prop];;
+      for(var prop in userOptions){
+          res[prop]=userOptions[prop];
       }
       return res;
   } 
@@ -192,7 +194,7 @@
       var enhance=handlers.enhance=handlers.enhance || {};
       if (enhance.date !== null)
       enhance.date = function (fNode, oNode) {
-          var o = getOptions(options, "date");
+          var o = getOptions(options, "date", fNode, oNode);
           o.language = culture;
           o.startView = 2;
           if (typeof o.autoclose == "undefined") o.autoclose = true;
@@ -213,7 +215,7 @@
       };
       if (enhance.week !== null)
       enhance.week = function(fNode, oNode){
-          var o = getOptions(options, "week");
+          var o = getOptions(options, "week", fNode, oNode);
           o.language = culture;
           o.startView = 2;
           if (typeof o.autoclose == "undefined") o.autoclose = true;
@@ -234,7 +236,7 @@
       };
       if (enhance.month !== null)
       enhance.month = function(fNode, oNode){
-          var o = getOptions(options, "month");
+          var o = getOptions(options, "month", fNode, oNode);
           o.language = culture;
           o.startView = 3;
           if (typeof o.autoclose == "undefined") o.autoclose = true;
@@ -255,7 +257,7 @@
       };
       if (enhance.time !== null)
       enhance.time = function(fNode, oNode){
-          var o = getOptions(options, "time");
+          var o = getOptions(options, "time", fNode, oNode);
           o.language = culture;
           o.startView = o.maxView = 1;
           if (typeof o.autoclose == "undefined") o.autoclose = true;
@@ -276,7 +278,7 @@
       };
       if (enhance.datetime !== null)
       enhance.datetime = function(fNode, oNode){
-          var o = getOptions(options, "datetime");
+          var o = getOptions(options, "datetime", fNode, oNode);
           o.language = culture;
           o.startView = 2;
           if (typeof o.autoclose == "undefined") o.autoclose = true;
@@ -298,7 +300,7 @@
       var humanFNFormatter = mvcct.enhancer.Globalize().numberFormatter();
       if (enhance.range !== null)
       enhance.range = function (fNode, oNode) {
-          var o = getOptions(options, "range");
+          var o = getOptions(options, "range", fNode, oNode);
           o.min= enhancer.parse("range", oNode.getAttribute("min"), true);
           o.max= enhancer.parse("range", oNode.getAttribute("max"), true);
           o.step = enhancer.parse("range", oNode.getAttribute("step"), true);
@@ -322,7 +324,7 @@
       };
       if (enhance.color !== null)
       enhance.color = function(fNode, oNode){
-          var o = getOptions(options, "range");
+          var o = getOptions(options, "range", fNode, oNode);
           if(typeof o.format == "undefined") o.format = "hex";
           var newContent;
           if(o.makeComponent){
