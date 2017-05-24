@@ -195,6 +195,7 @@
       if (enhance.date !== null)
       enhance.date = function (fNode, oNode) {
           var o = getOptions(options, "date", fNode, oNode);
+          if(!o.zIndex) o.zIndex=1000000;
           o.language = culture;
           o.startView = 2;
           if (typeof o.autoclose == "undefined") o.autoclose = true;
@@ -216,6 +217,7 @@
       if (enhance.week !== null)
       enhance.week = function(fNode, oNode){
           var o = getOptions(options, "week", fNode, oNode);
+          if(!o.zIndex) o.zIndex=1000000;
           o.language = culture;
           o.startView = 2;
           if (typeof o.autoclose == "undefined") o.autoclose = true;
@@ -237,6 +239,7 @@
       if (enhance.month !== null)
       enhance.month = function(fNode, oNode){
           var o = getOptions(options, "month", fNode, oNode);
+          if(!o.zIndex) o.zIndex=1000000;
           o.language = culture;
           o.startView = 3;
           if (typeof o.autoclose == "undefined") o.autoclose = true;
@@ -258,6 +261,7 @@
       if (enhance.time !== null)
       enhance.time = function(fNode, oNode){
           var o = getOptions(options, "time", fNode, oNode);
+          if(!o.zIndex) o.zIndex=1000000;
           o.language = culture;
           o.startView = o.maxView = 1;
           if (typeof o.autoclose == "undefined") o.autoclose = true;
@@ -279,6 +283,7 @@
       if (enhance.datetime !== null)
       enhance.datetime = function(fNode, oNode){
           var o = getOptions(options, "datetime", fNode, oNode);
+          if(!o.zIndex) o.zIndex=1000000;
           o.language = culture;
           o.startView = 2;
           if (typeof o.autoclose == "undefined") o.autoclose = true;
@@ -344,7 +349,7 @@
   var oldInput = mvcct.enhancer["addBasicInput"];
   mvcct.enhancer["addBasicInput"] = function (Globalize) {
     oldInput(Globalize);
-    mvcct.enhancer["register"](null, false, null, "html5 bootstrap/widgets fallback", preProcessOptions);
+    mvcct.enhancer["register"](null, false, null, "html5 bootstrap/widgets fallback", preProcessOptions, 'html5-input');
   };
   
 })(jQuery);

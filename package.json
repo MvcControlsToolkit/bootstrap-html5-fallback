@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-html5-fallback",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "bootstrap widgets based html5 inputs fallback",
   "main": "bootstrap.html5.fallback.js",
   "repository": {
@@ -28,7 +28,7 @@
     "bootstrap.html5.fallback.d.ts"
   ],
   "dependencies": {
-        "mvcct-enhancer": ">=1.0.1",
+        "mvcct-enhancer": ">=1.1.0",
         "bootstrap-colorpicker": ">=2.3.3",
         "bootstrap-datetime-picker": ">=2.3.10",
         "bootstrap-slider": ">=7.0.2"
