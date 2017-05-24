@@ -25,6 +25,8 @@ automatically installed when you install `bootstrap-html5-fallback`:
     so that the selected color is shown to the right of it. As a default this option is `false`;
 7. Numeric-range [seiyria-bootstrap-slider](https://github.com/seiyria/bootstrap-slider).Options placed in options property: `html5FallbackWidgets.range`
 
+As for version >= 1.0.2 all above options accept also a function that is passed the node to enhance with the widget (as an Html node NOT a jQuery object) as firts argument, and the original Html5 node as second argument. The function must return a valid option object for the widget. This way, the developer may apply different options to each instance of the same widget.
+
 The enhancemet of a falled back Html5 input with one of the above widget may be prevented by setting to `null` its associated `enhance` property in the `mvcct-enhancer` options object:
 
 ```
